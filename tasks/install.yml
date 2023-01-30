@@ -3,7 +3,7 @@
   uri:
     url: "https://api.github.com/repos/seaweedfs/seaweedfs/releases/{{ (weed.version == 'latest') | ternary('latest', 'tags/' + weed.version) }}"
     return_content: true
-  delegate_to: localhost
+  delegate_to: 127.0.0.1
   run_once: true
   register: seaweedfs_release
 
